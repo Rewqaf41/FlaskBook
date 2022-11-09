@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{%block title%}
+Добавление книги
+{% endblock %}
+
+
+{%block body%}
+<div class="container">
+    <h1>Добавление книги</h1>
+    <form method="post">
+        <input type="text" name="author" id="author" placeholder="Автор" class="form-control"><br>
+        <input type="text" name="title" id="title" placeholder="Название книги" class="form-control"><br>
+        <input type="text" name="pages" id="pages" placeholder="Кол-во страниц" class="form-control"><br>
+        <input type="text" name="annum" id="annum" placeholder="Год выхода книги" class="form-control"><br>
+        <input type="submit" class="btn btn-success" value="Добавить"><br>
+    </form>
+</div>
+{% endblock %}

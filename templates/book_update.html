@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{%block title%}
+Обновление информации
+{% endblock %}
+
+
+{%block body%}
+<div class="container">
+<h1>Обновление информации</h1>
+    <form method="post">
+        <input type="text" name="author" id="author" placeholder="Автор" value="{{article.author}}" class="form-control"><br>
+        <textarea type="text" name="title" id="title" placeholder="Название книги" class="form-control">{{article.title}}</textarea><br>
+        <textarea type="text" name="pages" id="pages" placeholder="Кол-во страниц" class="form-control">{{article.pages}}</textarea><br>
+        <textarea type="text" name="annum" id="annum" placeholder="Год выхода книги" class="form-control">{{article.annum}}</textarea><br>
+        <input type="submit" class="btn btn-success" value="Обновить">
+        </form>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{%block title%}
+Книги
+{% endblock %}
+
+
+{%block body%}
+<div class="container mt-5">
+    <h1 class="border-bottom border-3 ">Все Книги</h1>
+    {% for el in articles %}
+        <div class="alert alert-info">
+            <h2>{{ el.author}}</h2>
+            <p>Название книги: <b>{{ el.title}}</b></p>
+            <p>Колличество страниц: <b>{{ el.pages}}</b></p>
+            <p> Год выпуска: <b>{{ el.annum}}</b></p>
+            <p><b>Дата: {{el.date.date()}}</b></p>
+            <a href="/books/{{ el.id }}/del" class="btn btn-danger">Удалить Книгу</a>
+            <a href="/books/{{ el.id }}/update" class="btn btn-warning">Изменить</a>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
